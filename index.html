@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle class="tittle">Clock</tittle>
+    </head>
+<body>
+   
+    <div class="realistic-clock">
+      <div class="clock-face">
+        <div class="glass-cover"></div>
+        <div class="hour hand"></div>
+        <div class="minute hand"></div>
+        <div class="second hand"></div>
+        <div class="center-circle"></div>
+        <div class="clock-numbers">
+          <p style="top: 0.5px; left: 135px;" class="number">12</p>
+          <p style="top: 100px; right: 10px;" class="number">3</p>
+          <p style="bottom: 0.5px; left: 135px;" class="number">6</p>
+          <p style="top: 100px; left: 10px;" class="number">9</p>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <style>
+        body{
+            background-color: #1d6981;
+        }
+.tittle{
+    font-size: 48px;
+    color: #b60d0d;
+}
+.realistic-clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #333, #111);
+  border-radius: 50%;
+  border: 10px solid #cec5c5;
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.glass-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+.center-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #666, #333);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.hand {
+  position: absolute;
+  background: #222;
+  border-radius: 2px;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.hour {
+  width: 10px;
+  height: 100px;
+  top: 70px;
+  background: linear-gradient(to bottom, #1d6981, #444);
+  animation: rotate-hour 43200s linear infinite;
+}
+
+.minute {
+  width: 6px;
+  height: 100px;
+  top: 60px;
+  background: linear-gradient(to bottom, #bbb, #666);
+  animation: rotate-minute 3600s linear infinite;
+}
+
+.second {
+  width: 3px;
+  height: 100px;
+  top: 45px;
+  background: red;
+  animation: rotate-second 60s linear infinite;
+}
+
+.number {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes rotate-hour {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-minute {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-second {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+
+
+    </style>
+</body>    
+</html>
